@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="css/style_5.css">
+    <title>English TV | Actividad 5</title>
+  </head>
+  <script src="https://luke-chang.github.io/js-spatial-navigation/spatial_navigation.js"></script>
+  <!-- If the resource load fails, download the file and load it as below. -->
+  <!-- <script src="./src/spatial_navigation.js"></script> -->
+  <script src="./src/eventListeners.js"></script>
+  <script>
+    window.addEventListener('load', function() {
+      SpatialNavigation.init();
+      SpatialNavigation.add({
+        selector: '.item'
+      });
+      SpatialNavigation.makeFocusable();
+      
+      addEventListeners();
+    });
+  </script>
+  <body>
+    <audio autoplay="true" src="audio/music_fondo.mp3" type="audio/mpeg" controls="true" loop="3"></audio>
+    <div class="container">
+      <header>
+        <h1>Reading - True or False</h1>
+        <p>Look, read and choose true or false according to what you think </p>
+        <button type="button" class="btn btn-warning"><a href="index.html">Regresar</a></button>
+      </header>
+      <section>
+        <img src="css/img/actividad5.png">
+        <div id="resultado"></div>
+        <form name="quizForm" onsubmit="return verificarRespuestas()">
+          
+          <h3>1. A man is sleeping on a toast.
+          <select name="p1">
+            <option></option>
+            <option id="true">True</option>
+            <option id="false">False</option>
+          </select>
+          </h3>
+
+          <h3>2. A girl and a boy are playing with an orange.
+          <select name="p2">
+            <option></option>
+            <option id="true">True</option>
+            <option id="false">False</option>
+          </select>
+          </h3>
+
+          <h3>3. A man is cooking a shoe.
+          <select name="p3">
+            <option></option>
+            <option id="true">True</option>
+            <option id="false">False</option>
+          </select>
+          </h3>
+
+          <h3>4. The lifeguard is wearing a chef´s hat.
+          <select name="p4">
+            <option></option>
+            <option id="true">True</option>
+            <option id="false">False</option>
+          </select>
+          </h3>
+
+          <h3>5. The dog is eating pizza
+          <select name="p5">
+            <option></option>
+            <option id="true">True</option>
+            <option id="false">False</option>
+          </select>
+          </h3>
+
+          <h3>6. The ball next to the swimming pool is red and blue.
+          <select name="p6">
+            <option></option>
+            <option id="true">True</option>
+            <option id="false">False</option>
+          </select>
+          </h3>
+
+          <h3>7. There is a mouse sailing in the swimming pool.
+          <select name="p7">
+            <option></option>
+            <option id="true">True</option>
+            <option id="false">False</option>
+          </select>
+          </h3>
+
+          <h3>8. There is an orange bag next to the purple towel.
+          <select name="p8">
+            <option></option>
+            <option id="true">True</option>
+            <option id="false">False</option>
+          </select><br><br>
+          </h3>
+
+          <input type="submit" name="Enviar">
+        </form>
+      </section>
+    </div>
+          <script type="text/javascript" src="js/quiz5.js"></script>
+  </body>
+</html>

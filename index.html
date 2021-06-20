@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+    <link rel="stylesheet" href="css/style.css">
+    <title>English TV</title>
+	<script src="webOSTVjs-1.2.3/webOSTV.js" charset="utf-8"></script>
+	<script src="webOSTVjs-1.2.3/webOSTV-dev.js" charset="utf-8"></script>
+	<script type="text/javascript">
+	   //sample code for calling LS2 API
+       var lunaReq= webOS.service.request("luna://com.palm.systemservice",
+        {
+            method:"clock/getTime",
+            parameters:{},
+            onSuccess: function (args) {
+				console.log("UTC:", args.utc);
+            },
+            onFailure: function (args) {
+            }
+        });
+	</script>
+</head>
+<script src="https://luke-chang.github.io/js-spatial-navigation/spatial_navigation.js"></script>
+  <!-- If the resource load fails, download the file and load it as below. -->
+  <!-- <script src="./src/spatial_navigation.js"></script> -->
+  <script src="js/eventListeners.js"></script>
+  <script>
+    window.addEventListener('load', function() {
+      SpatialNavigation.init();
+      SpatialNavigation.add({
+        selector: '.item'
+      });
+      SpatialNavigation.makeFocusable();
+      
+      addEventListeners();
+    });
+  </script>
+<body>
+	<audio src="audio/music_fondo.mp3" type="audio/mpeg" controls="true" autoplay="true" loop="3"></audio>
+    <div class="container" id="container">
+      <div id="main">
+        <div id="mainflex">
+          <div class="item" tabindex="0" id="item1"><a href="actividad_1.html">Prepositions of time</a></div>
+          <div class="item" tabindex="0" id="item2"><a href="actividad_2.html">Wh - Questions</a></div>
+          <div class="item" tabindex="0" id="item3"><a href="actividad_3.html">Be Verb</a></div>
+          <div class="item" tabindex="0" id="item4"><a href="actividad_4.html">There is and There are</a></div>
+          <div class="item" tabindex="0" id="item5"><a href="actividad_5.html">Reading - True or False</a></div>
+        </div>
+      </div>
+    </div>
+</body>
+</html>

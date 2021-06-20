@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="css/style_1.css">
+    <title>English TV | Actividad 1</title>
+  </head>
+  <script src="https://luke-chang.github.io/js-spatial-navigation/spatial_navigation.js"></script>
+  <!-- If the resource load fails, download the file and load it as below. -->
+  <!-- <script src="./src/spatial_navigation.js"></script> -->
+  <script src="./src/eventListeners.js"></script>
+  <script>
+    window.addEventListener('load', function() {
+      SpatialNavigation.init();
+      SpatialNavigation.add({
+        selector: '.item'
+      });
+      SpatialNavigation.makeFocusable();
+      
+      addEventListeners();
+    });
+  </script>
+  <body>
+    <audio autoplay="true" src="audio/music_fondo.mp3" type="audio/mpeg" controls="true" loop="3"></audio>
+    <div class="container">
+    	<header>
+    		<h1>Prepositions of time</h1>
+    		<p>Complete the sentences. Use words from the list: </p>
+    		<h3>ago, during, for, from, in, since, to</h3>
+    		<button type="button" class="btn btn-warning"><a href="index.html">Regresar</a></button>
+    	</header>
+    	<section>
+    		<div id="resultado"></div>
+    		<form name="quizForm" onsubmit="return verificarRespuestas()">
+    			
+    			<h3>1. The cell phone was invented over 30 years ________.</h3>
+    			<input type="radio" name="p1" value="a">a. ago<br/>
+    			<input type="radio" name="p1" value="b">b. since<br/>
+    			<input type="radio" name="p1" value="c">c. during<br/>
+
+
+    			<h3>2. The first laptop was produced ________ 1981.</h3>
+    			<input type="radio" name="p2" value="a">a. to<br/>
+    			<input type="radio" name="p2" value="b">b. in<br/>
+    			<input type="radio" name="p2" value="c">c. for<br/>
+
+    			<h3>3. Mexico has been independent ________ more than 200 years.</h3>
+    			<input type="radio" name="p3" value="a">a. since<br/>
+    			<input type="radio" name="p3" value="b">b. from<br/>
+    			<input type="radio" name="p3" value="c">c. for<br/>
+
+    			<h3>4. World war II lasted ________ 1939 ________ 1945.</h3>
+    			<input type="radio" name="p4" value="a">a. from / to<br/>
+    			<input type="radio" name="p4" value="b">b. in / to<br/>
+    			<input type="radio" name="p4" value="c">c. during / in<br/>
+
+    			<h3>5. Vietnam was separated into two parts ________ about 30 years.</h3>
+    			<input type="radio" name="p5" value="a">a. since<br/>
+    			<input type="radio" name="p5" value="b">b. during<br/>
+    			<input type="radio" name="p5" value="c">c. for<br/><br/>
+
+    			<input type="submit" name="Enviar">
+    		</form>
+    	</section>
+    </div>
+    			<script type="text/javascript" src="js/quiz1.js"></script>
+  </body>
+</html>

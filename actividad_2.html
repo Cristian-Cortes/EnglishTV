@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="css/style_2.css">
+    <title>English TV | Actividad 2</title>
+  </head>
+  <script src="https://luke-chang.github.io/js-spatial-navigation/spatial_navigation.js"></script>
+  <!-- If the resource load fails, download the file and load it as below. -->
+  <!-- <script src="./src/spatial_navigation.js"></script> -->
+  <script src="./src/eventListeners.js"></script>
+  <script>
+    window.addEventListener('load', function() {
+      SpatialNavigation.init();
+      SpatialNavigation.add({
+        selector: '.item'
+      });
+      SpatialNavigation.makeFocusable();
+      
+      addEventListeners();
+    });
+  </script>
+  <body>
+    <audio autoplay="true" src="audio/music_fondo.mp3" type="audio/mpeg" controls="true" loop="3"></audio>
+    <div class="container">
+    	<header>
+    		<h1>Wh - Questions</h1>
+    		<p>Reorder the words: </p>
+        <p><span>Example: </span>is / your / where / brother / ? </p>
+        <p>- Where is your brother? </p>
+        <button type="button" class="btn btn-warning"><a href="index.html">Regresar</a></button>
+    	</header>
+    	<section>
+    		<div id="resultado"></div>
+    		<form name="quizForm" onsubmit="return verificarRespuestas()">
+    			
+    			<h3>1. teacher / is / your / who / ?</h3>
+          <input type="text" name="p1">
+    			
+    			<h3>2. phone number / is / what / your / ?</h3>
+    			<input type="text" name="p2"><br/>
+
+    			<h3>3. live / where / you / do / ?</h3>
+    			<input type="text" name="p3"><br/>
+
+    			<h3>4. study / you / english / do / why / ?</h3>
+    			<input type="text" name="p4"><br/>
+
+    			<h3>5. visit / when / do / your grandmother / you / ?</h3>
+    			<input type="text" name="p5"><br/><br/>
+
+    			<input type="submit" name="Enviar">
+    		</form>
+    	</section>
+    </div>
+    			<script type="text/javascript" src="js/quiz2.js"></script>
+  </body>
+</html>

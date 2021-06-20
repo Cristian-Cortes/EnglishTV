@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="css/style_4.css">
+    <title>English TV | Actividad 4</title>
+  </head>
+  <script src="https://luke-chang.github.io/js-spatial-navigation/spatial_navigation.js"></script>
+  <!-- If the resource load fails, download the file and load it as below. -->
+  <!-- <script src="./src/spatial_navigation.js"></script> -->
+  <script src="./src/eventListeners.js"></script>
+  <script>
+    window.addEventListener('load', function() {
+      SpatialNavigation.init();
+      SpatialNavigation.add({
+        selector: '.item'
+      });
+      SpatialNavigation.makeFocusable();
+      
+      addEventListeners();
+    });
+  </script>
+  <body>
+    <audio autoplay="true" src="audio/music_fondo.mp3" type="audio/mpeg" controls="true" loop="3"></audio>
+    <div class="container">
+    	<header>
+    		<h1>There is and There are</h1>
+    		<p>Answer the questions using: </p>
+        <h3>yes, there is / yes, there are / no there isn´t / no there aren´t</h3>
+        <button type="button" class="btn btn-warning"><a href="index.html">Regresar</a></button>
+    	</header>
+    	<section>
+        <img src="css/img/actividad4.png">
+    		<div id="resultado"></div>
+    		<form name="quizForm" onsubmit="return verificarRespuestas()">
+    			
+    			<h3>1. Are there any eggs in the fridge? <input type="text" name="p1"></h3>
+          
+    			<h3>2. Are there any onions in the fridge? <input type="text" name="p2"></h3>
+
+    			<h3>3. Is there any lettuce in the fridge? <input type="text" name="p3"></h3>
+
+    			<h3>4. Is there any milk in the fridge? <input type="text" name="p4"></h3>
+
+    			<h3>5. Are there bananas in the fridge? <input type="text" name="p5"></h3>
+
+          <h3>6. Is there a cake in the fridge? <input type="text" name="p6"></h3>
+
+          <h3>7. Are there any lemons in the fridge? <input type="text" name="p7"></h3>
+
+          <h3>8. Is there any pizza in the fridge? <input type="text" name="p8"></h3>
+
+    			<input type="submit" name="Enviar">
+    		</form>
+    	</section>
+    </div>
+    			<script type="text/javascript" src="js/quiz4.js"></script>
+  </body>
+</html>
